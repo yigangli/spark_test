@@ -1,0 +1,38 @@
+apply plugin : 'scala'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply from: "$rootDir/gradle/dependencies.gradle"
+apply plugin: 'java-library'
+
+
+version = '1.0.0'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile([
+            deps.scala
+    ])
+
+    compileOnly([
+            deps.guava,
+            deps.spark,
+            deps.sparkSql,
+            deps.hocon,
+            deps.hadoop,
+            deps.hadoopCore
+    ])
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation([
+            deps.guava,
+            deps.scala,
+            deps.spark,
+            deps.sparkSql
+    ])
+}
+
+
