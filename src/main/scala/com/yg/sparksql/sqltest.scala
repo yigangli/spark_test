@@ -8,7 +8,8 @@ object sqltest {
   def main(args: Array[String]): Unit = {
     val conf: SparkConf = new SparkConf().setMaster("local").setAppName(this.getClass.getSimpleName)
     val sc: SparkContext = new SparkContext(conf)
-    val rdd1: RDD[String] = sc.textFile("C:\\Users\\LYG\\Desktop\\word.txt")
+    sc.setLogLevel("OFF")
+    val rdd1: RDD[String] = sc.textFile("E:\\workspace\\testspark\\src\\file\\word.txt")
     rdd1.foreach(println)
   }
 }

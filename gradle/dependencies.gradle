@@ -5,16 +5,11 @@ ext {
 
 versions += [
         scala: "2.11",
-        spark: "2.3.2",
-        hocon: "1.2.0"
+        spark: "2.3.2"
 ]
 
 deps += [
-        guava: "com.google.guava:guava:21.0",
         scala: "org.scala-lang:scala-library:$versions.scala.11",
         spark: "org.apache.spark:spark-core_$versions.scala:$versions.spark",
-        sparkSql: "org.apache.spark:spark-sql_$versions.scala:$versions.spark",
-        hocon: "com.typesafe:config:$versions.hocon",
-        hadoop: "org.apache.hadoop:hadoop-common:2.7.0",
-        hadoopCore: "org.apache.hadoop:hadoop-core:0.20.2"
+        sparkSql: "org.apache.spark:spark-sql_$versions.scala:$versions.spark"
 ]

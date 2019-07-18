@@ -14,21 +14,12 @@ repositories {
 
 dependencies {
     compile([
-            deps.scala
-    ])
-
-    compileOnly([
-            deps.guava,
+            deps.scala,
             deps.spark,
-            deps.sparkSql,
-            deps.hocon,
-            deps.hadoop,
-            deps.hadoopCore
+            deps.sparkSql
     ])
-
     testImplementation 'junit:junit:4.12'
     testImplementation([
-            deps.guava,
             deps.scala,
             deps.spark,
             deps.sparkSql
