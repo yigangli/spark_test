@@ -16,13 +16,15 @@ dependencies {
     compile([
             deps.scala,
             deps.spark,
-            deps.sparkSql
+            deps.sparkSql,
+            deps.sparkStreaming
     ])
     testImplementation 'junit:junit:4.12'
     testImplementation([
             deps.scala,
             deps.spark,
-            deps.sparkSql
+            deps.sparkSql,
+            deps.sparkStreaming
     ])
 }
 

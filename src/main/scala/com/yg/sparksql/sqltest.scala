@@ -10,6 +10,7 @@ object sqltest {
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("ERROR")
     val rdd1: RDD[String] = sc.textFile("src/file/word.txt")
-    rdd1.foreach(println)
+    val wordcounts = rdd1.flatMap(_.split("\\s+")).map((_,1)).reduceByKey(_+_)
+    wordcounts.foreach(println)
   }
 }

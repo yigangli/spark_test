@@ -11,5 +11,6 @@ versions += [
 deps += [
         scala: "org.scala-lang:scala-library:$versions.scala.11",
         spark: "org.apache.spark:spark-core_$versions.scala:$versions.spark",
-        sparkSql: "org.apache.spark:spark-sql_$versions.scala:$versions.spark"
+        sparkSql: "org.apache.spark:spark-sql_$versions.scala:$versions.spark",
+        sparkStreaming: "org.apache.spark:spark-streaming_$versions.scala:$versions.spark"
 ]
