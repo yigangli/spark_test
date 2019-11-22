@@ -4,7 +4,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql._
 
-object sqltest {
+object WordCount {
   def main(args: Array[String]): Unit = {
     val conf: SparkConf = new SparkConf().setMaster("local").setAppName(this.getClass.getSimpleName)
     val sc: SparkContext = new SparkContext(conf)

@@ -17,14 +17,18 @@ dependencies {
             deps.scala,
             deps.spark,
             deps.sparkSql,
-            deps.sparkStreaming
+            deps.sparkStreaming,
+            deps.sparkStreamingKafka010,
+            deps.sparkStreamingKafka08
     ])
     testImplementation 'junit:junit:4.12'
     testImplementation([
             deps.scala,
             deps.spark,
             deps.sparkSql,
-            deps.sparkStreaming
+            deps.sparkStreaming,
+            deps.sparkStreamingKafka010,
+            deps.sparkStreamingKafka08
     ])
 }
 

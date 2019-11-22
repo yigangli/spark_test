@@ -3,7 +3,7 @@ package com.yg.sparkstreaming
 import org.apache.spark.streaming.dstream.ReceiverInputDStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
-object Demo {
+object SocketAndTextStreamDemo {
   def main(args: Array[String]): Unit = {
     import org.apache.spark.SparkConf
     val conf = new SparkConf().setAppName("test").setMaster("local[2]")

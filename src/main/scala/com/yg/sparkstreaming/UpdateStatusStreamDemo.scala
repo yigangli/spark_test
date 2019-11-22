@@ -4,7 +4,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 
-object Demo1 {
+object UpdateStatusStreamDemo {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("test").setMaster("local[2]")
     val ssc = new StreamingContext(conf,Seconds(5))
@@ -16,6 +16,9 @@ object Demo1 {
       val currentCount = values.sum
       val cnt = status.getOrElse(0)
       Some(currentCount+cnt)
+    })
+    words.foreachRDD(rdd=>{
+      rdd.cache()
     })
     wordCounts.print
     ssc.start()

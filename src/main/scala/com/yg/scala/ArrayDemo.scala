@@ -2,7 +2,7 @@ package com.yg.scala
 
 import scala.collection.mutable.ArrayBuffer
 
-object test {
+object ArrayDemo {
   def main(args: Array[String]): Unit = {
     val arr = Array(1,-3,6,2,-2,0,7,5,-4)
     val newarr1 = new ArrayBuffer[Int]()

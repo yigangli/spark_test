@@ -12,5 +12,8 @@ deps += [
         scala: "org.scala-lang:scala-library:$versions.scala.11",
         spark: "org.apache.spark:spark-core_$versions.scala:$versions.spark",
         sparkSql: "org.apache.spark:spark-sql_$versions.scala:$versions.spark",
-        sparkStreaming: "org.apache.spark:spark-streaming_$versions.scala:$versions.spark"
+        sparkStreaming: "org.apache.spark:spark-streaming_$versions.scala:$versions.spark",
+        sparkStreamingKafka010: "org.apache.spark:spark-streaming-kafka-0-10_$versions.scala:$versions.spark",
+        sparkStreamingKafka08:"org.apache.spark:spark-streaming-kafka-0-8_$versions.scala:$versions.spark"
+
 ]

@@ -1,3 +1,5 @@
+package com.yg.scala
+
 import java.io.PrintWriter
 import java.net.ServerSocket
 import java.util.Scanner
