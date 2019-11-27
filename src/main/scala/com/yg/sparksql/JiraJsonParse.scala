@@ -133,6 +133,8 @@ object JiraJsonParse{
       withColumn("Platform",$"PROJECT_KEY".substr(1,1))
     resdf.show(200)
     //Util.saveData(resdf,DB,TB,SAVE_PATH)
+    formatdf.unpersist()
+    fail_df.unpersist()
   }
 
   def addCodeWithCondition=udf{
